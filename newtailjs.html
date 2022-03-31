@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tailwind JS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+.span[onclick]{
+    background-color: black;
+}
+
+    pre {
+        overflow-y: scroll;
+
+        counter-reset: line-numbering;
+        /* background:#2c3e50; */
+        padding: 12px 0px 14px 0;
+        width: 100%;
+        color: black;
+        line-height: 140%;
+
+        .line::before {
+            content: counter(line-numbering);
+            counter-increment: line-numbering;
+            padding-right: 1em;
+            /* space after numbers */
+            padding-left: 8px;
+            width: 100%;
+            text-align: right;
+            opacity: 0.5;
+            color: white;
+        }
+    }
+    
+</style>
+
+<body>
+    <div
+        class="container w-3/4 h-3/4 absolute left-60 top-24  border border-black rounded-md sm:left-7 md:left-11 lg:left-60 ">
+        <div class="p-5 w-full sm:py-4 sm:flex  
+        sm:space-y-0 sm:space-x-6 max-h-96 flex ">
+        <div id="ten" class="flex justify-center">
+            <div id="first"  class="w-full absolute top-14  right-0 h-96  border border-black  bg-none ">
+                <div class="relative pt-1">
+                    <div class="flex mb-2 w-1/2 items-right  justify-between">
+                        <!-- <div>
+                    <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-black-600 bg-black-200">
+                      Task in progress
+                    </span>
+                  </div> -->
+                        <div class="text-right  ">
+                            <span
+                                class="text-xs font-semibold flex justify-right [\';p-'] items-end  text-black">
+                                50%
+                            </span>
+                        </div>
+                    </div>
+                    <div id="new" class=" flex justify-center">
+                        <div
+                            class="overflow-hidden h-7 mb-4 text-xs align-middle  border border-black w-1/2 flex rounded bg-white">
+                            <div style="width: 50%"
+                                class="shadow-none flex flex-col text-center whitespace-wrap text-white justify-center bg-gradient-to-r from-cyan-500 to-blue-500">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+            <button class="px-4 py-1 justify-start text-sm text-black-600 font-sm rounded-full border border-purple-200 hover:text-black 
+             focus:outline-none focus:ring-2 focus:ring-offset-2 ">copy url</button>
+            <button id="show" onclick="myFunction()" class="px-4 py-1  justify-end  absolute right-36  text-sm text-black-600 font-sm rounded-full border content content-start border-purple-200
+             hover:text-black   focus:outline-none focus:ring-2 focus:ring-offset-2">Show code</button>
+            <!-- <input type="text" name="notepad" id="main " class="border border-black "> -->
+            <button onclick="copyToClipboard()" class="px-4 py-1 text-sm justify-end absolute right-7  text-black-600 font-sm rounded-full border border-purple-200 hover:text-black  
+             focus:outline-none focus:ring-2 focus:ring-offset-2">Copy code</button>
+        </div>
+        <div class="flex justify-center">
+            <div id="maindiv" class="container border bg-slate-500 border-black w-full h-96 shadow-lg absolute m-auto "
+                data-lable="border"
+                class="h-5 bg-gradient-to-r from-cyan-500 to-blue-500 w-40 rounded-full absolute  left-96 top-56   ">
+                <img src="" alt="" srcset="">
+
+
+                <!-- <div id="pbar" class="container text-black text-center relative  h-11  border border-black  rounded-xl " >50%
+            <div class="w-1/2 bg-gradient-to-r from-cyan-500 to-blue-500 "></div>
+        </div>
+        <div id="scale" class="container relative w-1/2 bg-gradient-to-r from-cyan-500 to-blue-500">Aasdf</div> -->
+                <pre>
+            function megaHoverOver(){
+                    $(this).find(".sub").stop().fadeTo('fast', 1).show();
+                    (function($) { 
+                        jQuery.fn.calcSubWidth = function() {
+                            rowWidth = 0;
+                            //Calculate     row     
+                            $(this).find("ul").each(function() {					
+                                rowWidth += $(this).width(); 
+                            });	
+                        };
+                    })(jQuery); 
+                }</pre>
+            </div>
+
+        </div>
+
+        <div class=" flex relative justify-end space-x-3 right-7 top-3/4">
+
+            <button onclick="myXs()"
+                class="mybutton  border border-black rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-offset-2"
+                id="xs">xs</button>
+            <button onclick="mySm()"
+                class="mybutton border border-black rounded-md px-3 py-3 focus:outline-none focus:ring-2 focus:ring-offset-2"
+                id="sm">sm</button>
+            <button onclick="myMd()"
+                class="mybutton border border-black rounded-md px-3 py-3 focus:outline-none focus:ring-2 focus:ring-offset-2"
+                id="md">md</button>
+            <button onclick="myLg()"
+                class="mybutton border border-black rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-offset-2"
+                id="lg">lg</button>
+            <button onclick="myXl()"
+                class="mybutton border border-black rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-offset-2"
+                id="xl">xl</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+<!-- <script>
+jQuery('.mybutton').click(function(){
+    var element = jQuery("#maindiv");
+    var id =  jQuery(this).html();
+    if(id == 'xs'){
+        element.addClass('w-1/6');
+        element.removeClass('w-1/5');
+        element.removeClass('w-1/3');
+        element.removeClass('w-1/2');
+        element.removeClass('w-full');  
+    }
+    if(id == 'sm'){
+        element.addClass('w-1/5');
+        element.removeClass('w-1/6');
+        element.removeClass('w-1/3');
+        element.removeClass('w-1/2');
+        element.removeClass('w-full');
+    }
+    if(id == 'md'){
+        element.addClass('w-1/3');
+        element.removeClass('w-1/6');
+        element.removeClass('w-1/5');
+        element.removeClass('w-1/2');
+        element.removeClass('w-full');
+    }
+    if(id == 'lg'){
+        element.addClass('w-1/2');
+        element.removeClass('w-1/6');
+        element.removeClass('w-1/5');
+        element.removeClass('w-1/3');
+        element.removeClass('w-full');
+    }
+    if(id == 'xl'){
+        element.addClass('w-full');
+        element.removeClass('w-1/6');
+        element.removeClass('w-1/5');
+        element.removeClass('w-1/3');
+        element.removeClass('w-1/2');
+    }
+
+});
+
+
+
+
+
+
+function copyToClipboard() {
+    var element = jQuery("#maindiv pre");
+    var $temp = jQuery("<input>");
+    jQuery("body").append($temp);
+    $temp.val(jQuery(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+}
+    </script> -->
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("maindiv");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+
+
+
+
+    }
+</script>
+
+<script>
+    function myXs() {
+        var element = document.getElementById("maindiv first");
+        
+        element.classList.add("w-1/6");
+        var element = document.getElementById("maindiv first");
+        element.classList.remove("w-1/5");
+        element.classList.remove("w-1/3");
+        element.classList.remove("w-1/2");
+        element.classList.remove("w-full");
+    }
+    function mySm() {
+        var element = document.getElementById("maindiv");
+        element.classList.add("w-1/5");
+        var element = document.getElementById("maindiv");
+        element.classList.remove("w-1/6");
+        element.classList.remove("w-1/3");
+        element.classList.remove("w-1/2");
+        element.classList.remove("w-full");
+    }
+
+    function myMd() {
+        var element = document.getElementById("maindiv");
+        element.classList.add("w-1/3");
+        var element = document.getElementById("maindiv");
+        element.classList.remove("w-1/5");
+        element.classList.remove("w-1/6");
+        element.classList.remove("w-1/2");
+        element.classList.remove("w-full");
+    }
+
+    function myLg() {
+        var element = document.getElementById("maindiv");
+        element.classList.add("w-1/2");
+        var element = document.getElementById("maindiv");
+        element.classList.remove("w-1/5");
+        element.classList.remove("w-1/3");
+        element.classList.remove("w-1/6");
+        element.classList.remove("w-full");
+    }
+    function myXl() {
+        var element = document.getElementById("maindiv");
+        element.classList.add("w-full");
+        var element = document.getElementById("maindiv");
+        element.classList.remove("w-1/5");
+        element.classList.remove("w-1/3");
+        element.classList.remove("w-1/2");
+        element.classList.remove("w-1/6");
+    }
+
+
+</script>
