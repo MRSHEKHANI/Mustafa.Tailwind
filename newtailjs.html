@@ -12,9 +12,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <style>
-.span[onclick]{
-    background-color: black;
-}
+    .span[onclick] {
+        background-color: black;
+    }
 
     pre {
         overflow-y: scroll;
@@ -38,42 +38,42 @@
             color: white;
         }
     }
-    
 </style>
 
 <body>
     <div
         class="container w-3/4 h-3/4 absolute left-60 top-24  border border-black rounded-md sm:left-7 md:left-11 lg:left-60 ">
-        <div class="p-5 w-full sm:py-4 sm:flex  
+        <div class="p-5 w-full sm:py-4 sm:flex   
         sm:space-y-0 sm:space-x-6 max-h-96 flex ">
-        <div id="ten" class="flex justify-center">
-            <div id="first"  class="w-full absolute top-14  right-0 h-96  border border-black  bg-none ">
+
+            <div id="first" class="w-full absolute top-14  right-0 h-96 align-middle border border-black  bg-none ">
                 <div class="relative pt-1">
-                    <div class="flex mb-2 w-1/2 items-right  justify-between">
+                    <div class="flex mb-32 w-1/2 items-right  justify-between">
                         <!-- <div>
                     <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-black-600 bg-black-200">
                       Task in progress
                     </span>
                   </div> -->
-                        <div class="text-right  ">
-                            <span
-                                class="text-xs font-semibold flex justify-right [\';p-'] items-end  text-black">
-                                50%
-                            </span>
-                        </div>
+
                     </div>
                     <div id="new" class=" flex justify-center">
                         <div
-                            class="overflow-hidden h-7 mb-4 text-xs align-middle  border border-black w-1/2 flex rounded bg-white">
+                            class="overflow-hidden h-7 mb-4 text-xs align-middle w-1/3 border border-black flex rounded-full bg-white">
                             <div style="width: 50%"
-                                class="shadow-none flex flex-col text-center whitespace-wrap text-white justify-center bg-gradient-to-r from-cyan-500 to-blue-500">
+                                class="shadow-none flex flex-col text-center whitespace-wrap text-white justify-center rounded-full bg-gradient-to-r from-pink-600 to-yellow-500">
+                            </div>
+                            <div class="text-right  justify-end">
+                                <span
+                                    class="text-sm font-bold text-yellow-500 align-middle flex justify-right [\';p-'] items-end">
+                                    50%
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
 
             </div>
-        </div>
+
             <button class="px-4 py-1 justify-start text-sm text-black-600 font-sm rounded-full border border-purple-200 hover:text-black 
              focus:outline-none focus:ring-2 focus:ring-offset-2 ">copy url</button>
             <button id="show" onclick="myFunction()" class="px-4 py-1  justify-end  absolute right-36  text-sm text-black-600 font-sm rounded-full border content content-start border-purple-200
@@ -208,19 +208,19 @@ function copyToClipboard() {
 
 <script>
     function myXs() {
-        var element = document.getElementById("maindiv first");
-        
+        var element = document.getElementById("first");
+
         element.classList.add("w-1/6");
-        var element = document.getElementById("maindiv first");
+        var element = document.getElementById("first");
         element.classList.remove("w-1/5");
         element.classList.remove("w-1/3");
         element.classList.remove("w-1/2");
         element.classList.remove("w-full");
     }
     function mySm() {
-        var element = document.getElementById("maindiv");
+        var element = document.getElementById("first");
         element.classList.add("w-1/5");
-        var element = document.getElementById("maindiv");
+        var element = document.getElementById("first");
         element.classList.remove("w-1/6");
         element.classList.remove("w-1/3");
         element.classList.remove("w-1/2");
@@ -228,9 +228,9 @@ function copyToClipboard() {
     }
 
     function myMd() {
-        var element = document.getElementById("maindiv");
+        var element = document.getElementById("first");
         element.classList.add("w-1/3");
-        var element = document.getElementById("maindiv");
+        var element = document.getElementById("first");
         element.classList.remove("w-1/5");
         element.classList.remove("w-1/6");
         element.classList.remove("w-1/2");
@@ -238,18 +238,18 @@ function copyToClipboard() {
     }
 
     function myLg() {
-        var element = document.getElementById("maindiv");
+        var element = document.getElementById("first");
         element.classList.add("w-1/2");
-        var element = document.getElementById("maindiv");
+        var element = document.getElementById("first");
         element.classList.remove("w-1/5");
         element.classList.remove("w-1/3");
         element.classList.remove("w-1/6");
         element.classList.remove("w-full");
     }
     function myXl() {
-        var element = document.getElementById("maindiv");
+        var element = document.getElementById("first");
         element.classList.add("w-full");
-        var element = document.getElementById("maindiv");
+        var element = document.getElementById("first");
         element.classList.remove("w-1/5");
         element.classList.remove("w-1/3");
         element.classList.remove("w-1/2");
